@@ -1,6 +1,7 @@
 package com.ztk.starter.ds.annotation.service;
 
 import com.ztk.starter.ds.storage.Entity;
+import io.swagger.models.HttpMethod;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -16,6 +17,13 @@ import java.lang.annotation.Target;
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface DSH {
+
+    /**
+     * 请求类型
+     *
+     * @return
+     */
+    HttpMethod method() default HttpMethod.POST;
 
     /**
      * 返回信息实体

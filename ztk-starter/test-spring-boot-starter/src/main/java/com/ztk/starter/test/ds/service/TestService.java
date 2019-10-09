@@ -5,7 +5,8 @@ import com.ztk.starter.ds.annotation.service.DSH;
 import com.ztk.starter.ds.model.DSRequest;
 import com.ztk.starter.ds.model.DSResponse;
 import com.ztk.starter.test.ds.handler.UserHandler;
-import com.ztk.starter.test.ds.model.User;
+import com.ztk.starter.test.ds.model.GradeBooks;
+import io.swagger.models.HttpMethod;
 
 /**
  * 类的描述
@@ -16,6 +17,7 @@ import com.ztk.starter.test.ds.model.User;
 @DS
 public interface TestService {
 
-    @DSH(handler = UserHandler.class, entity = User.class)
+    @DSH(method = HttpMethod.GET, handler = UserHandler.class, entity = GradeBooks.class)
     DSResponse test(DSRequest request);
+
 }

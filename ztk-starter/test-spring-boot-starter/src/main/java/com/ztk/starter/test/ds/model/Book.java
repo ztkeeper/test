@@ -11,13 +11,16 @@ import com.ztk.starter.ds.storage.Entity;
  * @author sunyue
  * @date 2019/9/30 下午12:26
  */
-@DC(value = "work", type = DataType.JSON)
-public class Work implements Entity<Work> {
+@DC(value = "book", type = DataType.JSON)
+public class Book implements Entity<Book> {
 
-    @DF(value = "name")
+    @DF(value = "id")
+    private Integer id;
+
+    @DF(value = "info")
     private String name;
 
-    @DF(value = "address")
-    private String address;
+    @DF(value = "coverUrl")
+    private String coverUrl;
 
 }

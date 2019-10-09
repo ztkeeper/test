@@ -14,18 +14,18 @@ import lombok.Data;
  * @date 2019/9/30 下午12:23
  */
 @Data
-@DC(value = "user", type = DataType.JSON)
-public class User implements Entity<User> {
+@DC(value = "gradeBooks", type = DataType.JSON)
+public class GradeBooks implements Entity<GradeBooks> {
 
     @DF(value = "id")
     private String id;
 
-    @DF(value = "name")
-    private String name;
+    @DF(value = "bookId")
+    private String bookId;
 
     @DF(value = "sex")
     private String sex;
 
     @DFInner
-    private Work work;
+    private Book book;
 }

@@ -11,5 +11,24 @@ import lombok.Data;
 @Data
 public class DSRequest {
 
+    /**
+     * 请求地址
+     */
+    private String url;
+
+    /**
+     * 资源路径
+     */
+    private String path;
+
+    /**
+     * 请求参数 - json
+     */
+    private String param;
+
+    /**
+     * 请求参数 - json
+     */
+    private String headers;
 
 }
