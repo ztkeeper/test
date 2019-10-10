@@ -1,6 +1,6 @@
 package com.ztk.starter.ds;
 
-import com.ztk.starter.ds.scanner.DSAnnotationHandler;
+import com.ztk.starter.ds.resolver.ResolverFactory;
 import com.ztk.starter.ds.scanner.DSMappingHandler;
 import org.springframework.context.ApplicationContext;
 
@@ -26,6 +26,11 @@ public class DSContext {
     }
 
     protected DSContext registerDSMappingHandler(DSMappingHandler bean) {
+        context.put(bean.getClass(), bean);
+        return this;
+    }
+
+    protected DSContext registerResolverFactory(ResolverFactory bean) {
         context.put(bean.getClass(), bean);
         return this;
     }

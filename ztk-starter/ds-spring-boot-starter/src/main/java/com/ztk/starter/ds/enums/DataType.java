@@ -12,7 +12,24 @@ package com.ztk.starter.ds.enums;
  */
 public enum DataType {
 
+    /**
+     * xml 格式结果
+     */
     XML,
+    /**
+     * json 格式结果
+     */
     JSON;
+
+    public enum EntityType {
+        /**
+         * object 形式数据
+         */
+        OBJECT,
+        /**
+         * array 形式数据
+         */
+        ARRAY;
+    }
 
 }

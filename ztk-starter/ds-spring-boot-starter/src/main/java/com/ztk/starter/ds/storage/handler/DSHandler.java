@@ -6,7 +6,7 @@ package com.ztk.starter.ds.storage.handler;
  * @author sunyue
  * @date 2019/9/30 上午11:52
  */
-public interface DSHandler {
+public interface DSHandler<T, R> {
 
-    void handle();
+    R handle(T response);
 }
